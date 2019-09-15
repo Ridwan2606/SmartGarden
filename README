@@ -1,0 +1,21 @@
+Raspberry PI Interfacing:
+
+- Follow the circuit diagram (SG_RASP_PI_CIRCUIT_DIAGRAM) to reconstruct the circuit
+- Note that this code version is already on the PI device under 'tempread.py' which is executed upon booting up. If the code is not on the device,
+Copy the python file (SG_RASP_PI_PYTHON) on the PI device and add the file to the booting up script.
+
+Front-End:
+
+- The angular app built for production is already on the Microsoft Azure VM in the path "C:\Users\Admins\Desktop\SmartGardenServer\SmartGarden".
+ If not, build the angular app (SG_WEBSITE_FRONTEND) for production and serve the 'dist' file produced on IIS on PORT 80 on the VM
+
+Back-End: 
+
+- The backend is already running on the Microsoft Azure VM in the path "C:\Users\Admins\Desktop\SmartGardenServer\API backend". 
+If not, copy the express app (SG_API_BACKEND) on the VM and use a process manager PM2 (for e.g) to run it.
+- The database is already hosted on the VM. If not working, recreate the database using the SQL file. 
+- Look for the 'data' folder in the express app. It contains the credentials of the MYSQL user for the backend and username/password 
+for the basic authentication protocol used when making HTTP requests to the endpoints.
+
+
+More documentation on how the project was undergone can be found in the file SG_OPS_LIST.
